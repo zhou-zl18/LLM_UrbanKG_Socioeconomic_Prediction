@@ -9,7 +9,7 @@ import httpx
 MODEL = "gpt-4o"
 
 def run_llm(prompt):
-    key = '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'
+    key = 'put your key here'
     proxy = "http://127.0.0.1:7890"
     client = OpenAI(
         api_key=key,
