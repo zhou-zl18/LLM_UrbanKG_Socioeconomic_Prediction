@@ -1,0 +1,54 @@
+{
+    "Regional Competitive Dynamics": {
+        "Relations": [
+            "rel_13",
+            "rel_32",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has POI THAT Is Competitive With POI THAT Locates At Region"
+    },
+    "Brand and Category Influence": {
+        "Relations": [
+            "rel_26",
+            "rel_7",
+            "rel_10",
+            "rel_25"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Belongs To Category1 THAT Has Brand Of Brand THAT Has Placed Store At Region"
+    },
+    "Geographical and Functional Similarity": {
+        "Relations": [
+            "rel_35",
+            "rel_34"
+        ],
+        "Description": "Region THAT Has Similar Function With Region THAT Is Near By Region"
+    },
+    "Population-Driven Economic Activity": {
+        "Relations": [
+            "rel_23",
+            "rel_13",
+            "rel_1",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Large Population Inflow From Region THAT Has POI THAT Has Category Of Category1 THAT Exists In POI THAT Locates At Region"
+    },
+    "Culinary Economic Indicator": {
+        "Relations": [
+            "rel_13",
+            "rel_28",
+            "rel_7",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has POI THAT Has Brand Of Brand THAT Belongs To Category1 THAT Exists In POI THAT Locates At Region"
+    },
+    "Culinary Influence on Economic Activity": {
+        "Relations": [
+            "rel_13",
+            "rel_28",
+            "rel_25"
+        ],
+        "Description": "Region THAT Has POI THAT Has Brand Of Brand THAT Has Placed Store At Region"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "Regional Brand Attraction": {
+        "Relations": [
+            "rel_26",
+            "rel_7",
+            "rel_10",
+            "rel_27",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Belongs To Category1 THAT Has Brand Of Brand THAT Exists In POI THAT Locates At Region"
+    },
+    "Regional Category Influence": {
+        "Relations": [
+            "rel_13",
+            "rel_2",
+            "rel_17",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has POI THAT Has Category Of Category2 THAT Is Sub-Category Of Category1 THAT Exists In POI THAT Locates At Region"
+    },
+    "Regional Business Dynamics": {
+        "Relations": [
+            "rel_29",
+            "rel_16",
+            "rel_32",
+            "rel_14"
+        ],
+        "Description": "Region THAT Is Served By BusinessArea THAT Contains POI THAT Is Competitive With POI THAT Locates At Region"
+    },
+    "Population-Driven Review Dynamics": {
+        "Relations": [
+            "rel_23",
+            "rel_13",
+            "rel_1",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Large Population Inflow From Region THAT Has POI THAT Has Category Of Category1 THAT Exists In POI THAT Locates At Region"
+    },
+    "Economic Activity Influence": {
+        "Relations": [
+            "rel_13",
+            "rel_28",
+            "rel_25"
+        ],
+        "Description": "Region THAT Has POI THAT Has Brand Of Brand THAT Has Placed Store At Region"
+    },
+    "Brand Category Influence": {
+        "Relations": [
+            "rel_26",
+            "rel_7",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Belongs To Category1 THAT Exists In POI THAT Locates At Region"
+    }
+}

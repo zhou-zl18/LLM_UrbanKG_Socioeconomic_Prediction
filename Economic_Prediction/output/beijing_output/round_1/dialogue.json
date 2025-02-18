@@ -1,0 +1,53 @@
+{
+    "llm_prompt": "Let's start with some concepts of the urban knowledge graph, which captures facts related to a city. In the following, we will introduce the entities and relations in it.\nThe urban knowledge graph contains 7 types of entities, i.e., Brand, Point of Interest (POI), Region, Business Area, Category1(coarse-grained category), Category2(medium-grained category), Cateory3(fine-grained category). In this context, fine-grained categorys is subcategory of medium-grained category and medium-grained category is subcategory of coarse-grained category.\nThe urban knowledge graph contains 35 types of relations to describe the connections between entities. The name of each relation consists of the entity type corresponding to the origin of this relation, the meaning of the relation, and the entity type corresponding to the destination of this relation, in order from left to right, separated by _, which indicates the relation to be experienced from the head entity to the tail entity. \nMapping of relation names to IDs:\nrel_1: POI_HasCategoryOf_Category1\nrel_2: POI_HasCategoryOf_Category2\nrel_3: POI_HasCategoryOf_Category3\nrel_4: Category1_ExistIn_POI\nrel_5: Category2_ExistIn_POI\nrel_6: Category3_ExistIn_POI\nrel_7: Brand_BelongTo_Category1\nrel_8: Brand_BelongTo_Category2\nrel_9: Brand_BelongTo_Category3\nrel_10: Category1_HasBrandOf_Brand\nrel_11: Category2_HasBrandOf_Brand\nrel_12: Category3_HasBrandOf_Brand\nrel_13: Region_Has_POI\nrel_14: POI_LocateAt_Region\nrel_15: POI_BelongTo_BusinessArea\nrel_16: BusinessArea_Contain_POI\nrel_17: Category2_IsSubCategoryOf_Category1\nrel_18: Category3_IsSubCategoryOf_Category1\nrel_19: Category3_IsSubCategoryOf_Category2\nrel_20: Category1_IsBroadCategoryOf_Category2\nrel_21: Category1_IsBroadCategoryOf_Category3\nrel_22: Category2_IsBroadCategoryOf_Category3\nrel_23: Region_PopulationInflowFrom_Region\nrel_24: Region_PopulationFlowTo_Region\nrel_25: Brand_HasPlacedStoreAt_Region\nrel_26: Region_HasStoreOf_Brand\nrel_27: Brand_ExistIn_POI\nrel_28: POI_HasBrandOf_Brand\nrel_29: Region_ServedBy_BusinessArea\nrel_30: BusinessArea_Serve_Region\nrel_31: Brand_RelatedBrand_Brand\nrel_32: POI_Competitive_POI\nrel_33: Region_BorderBy_Region\nrel_34: Region_NearBy_Region\nrel_35: Region_SimilarFunction_Region\n\nFor example, \"rel_1\" represents the relation \"HasCategoryOf\". It links a head entity with type \"POI\" to a tail entity with type \"Category1\", indicating that the POI has the specific coarse-grained category.\n\nA metapath consists of one or several relations in KG. For two neighboring relations in a metapath, the tail entity type of the former relation must be the same as the head entity type of the latter relation. For example, (rel_3, rel_19) is a valid metapath because the tail entity type of rel_3 is Category3 and the head entity type of rel_19 is also Category3. This metapath can be expressed as: POI_HasCategoryOf_Category3_IsSubCategoryOf_Category2.\nThe metapath (rel_3, rel_4) is invalid because the tail entity type of rel_3 is Category3, while the head entity type of rel_4 is Category1.\nNow we are using this knowledge graph for the \"Economic_Prediction\" task, i.e., predicting the economic level of urban regions. Please help me find some metapaths in this KG which may help this task. \nSince a metapath usually has semantic meaning in the KG, please name each metapath based on its meaning. For example, the metapath (rel_34, rel_33), i.e., Region_NearBy_Region_BorderBy_Region, can be named as 'Geographical Proximity'. Please also provide the reason for why you choose each metapath.\n\n\nPlease choose 3 metapaths. Note that: \n1. You must make sure that all triplets in the metapaths exist in the KG. \n2. Each metapath must contain the entity type \"Region\", i.e., at least one relation in the metapath must have \"Region\" as the head entity type or the tail entity type.\n3. You must answer in json format. For example:\n [{\"name\":\"xxx\", \"reason\":\"xxx\", \"metapath\":\"Region_BorderBy_Region_...\"}, ...]\nYour answer:  ",
+    "llm_output": [
+        "[\n    {\n        \"name\": \"Regional Brand Influence\",\n        \"reason\": \"This metapath captures the influence of brands that have stores in a region, which can be an indicator of economic activity and consumer spending in that region.\",\n        \"metapath\": \"Region_HasStoreOf_Brand_HasPlacedStoreAt_Region\"\n    },\n    {\n        \"name\": \"Business Area Economic Activity\",\n        \"reason\": \"This metapath highlights the relationship between regions and business areas, which can be a strong indicator of economic activity and commercial density in a region.\",\n        \"metapath\": \"Region_ServedBy_BusinessArea_Contain_POI\"\n    },\n    {\n        \"name\": \"Population Flow Dynamics\",\n        \"reason\": \"This metapath reflects the movement of people between regions, which can impact economic levels by affecting labor markets, consumer bases, and regional development.\",\n        \"metapath\": \"Region_PopulationFlowTo_Region_PopulationInflowFrom_Region\"\n    }\n]"
+    ],
+    "impact_aspects": {
+        "Regional Brand Influence": [
+            [
+                "rel_26",
+                "rel_25"
+            ]
+        ],
+        "Business Area Economic Activity": [
+            [
+                "rel_29",
+                "rel_16"
+            ]
+        ],
+        "Population Flow Dynamics": [
+            [
+                "rel_24",
+                "rel_23"
+            ]
+        ]
+    },
+    "llm_prompt_jl": "",
+    "llm_output_jl": [],
+    "impact_aspects_jl": {},
+    "llm_prompt_cl": "",
+    "llm_output_cl": [
+        "[\n    {\n        \"name\": \"Regional Brand Influence\",\n        \"reason\": \"This metapath captures the influence of brands that have stores in a region, which can be an indicator of economic activity and consumer spending in that region.\",\n        \"metapath\": \"Region_HasStoreOf_Brand_HasPlacedStoreAt_Region\"\n    },\n    {\n        \"name\": \"Business Area Economic Activity\",\n        \"reason\": \"This metapath highlights the relationship between regions and business areas, which can be a strong indicator of economic activity and commercial density in a region.\",\n        \"metapath\": \"Region_ServedBy_BusinessArea_Contain_POI\"\n    },\n    {\n        \"name\": \"Population Flow Dynamics\",\n        \"reason\": \"This metapath reflects the movement of people between regions, which can impact economic levels by affecting labor markets, consumer bases, and regional development.\",\n        \"metapath\": \"Region_PopulationFlowTo_Region_PopulationInflowFrom_Region\"\n    }\n]"
+    ],
+    "impact_aspects_cl": {
+        "Regional Brand Influence": [
+            [
+                "rel_26",
+                "rel_25"
+            ]
+        ],
+        "Business Area Economic Activity": [
+            [
+                "rel_29",
+                "rel_16"
+            ]
+        ],
+        "Population Flow Dynamics": [
+            [
+                "rel_24",
+                "rel_23"
+            ]
+        ]
+    }
+}

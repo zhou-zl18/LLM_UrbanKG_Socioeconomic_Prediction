@@ -1,0 +1,26 @@
+{
+    "Regional Brand Influence": {
+        "Relations": [
+            "rel_26",
+            "rel_27",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Exists In POI THAT Locates At Region"
+    },
+    "Business Area Impact": {
+        "Relations": [
+            "rel_29",
+            "rel_16",
+            "rel_14"
+        ],
+        "Description": "Region THAT Is Served By BusinessArea THAT Contains POI THAT Locates At Region"
+    },
+    "Regional Competition": {
+        "Relations": [
+            "rel_13",
+            "rel_32",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has POI THAT Is Competitive With POI THAT Locates At Region"
+    }
+}

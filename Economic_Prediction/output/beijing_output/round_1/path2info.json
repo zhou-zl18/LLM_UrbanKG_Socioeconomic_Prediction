@@ -1,0 +1,23 @@
+{
+    "Regional Brand Influence": {
+        "Relations": [
+            "rel_26",
+            "rel_25"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Has Placed Store At Region"
+    },
+    "Business Area Economic Activity": {
+        "Relations": [
+            "rel_29",
+            "rel_16"
+        ],
+        "Description": "Region THAT Is Served By BusinessArea THAT Contains POI"
+    },
+    "Population Flow Dynamics": {
+        "Relations": [
+            "rel_24",
+            "rel_23"
+        ],
+        "Description": "Region THAT Has Large Population Flow To Region THAT Has Large Population Inflow From Region"
+    }
+}

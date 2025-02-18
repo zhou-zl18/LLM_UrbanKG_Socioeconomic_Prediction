@@ -1,0 +1,49 @@
+{
+    "Regional Competitive Dynamics": {
+        "Relations": [
+            "rel_13",
+            "rel_32",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has POI THAT Is Competitive With POI THAT Locates At Region"
+    },
+    "Brand Category Influence": {
+        "Relations": [
+            "rel_26",
+            "rel_7",
+            "rel_10",
+            "rel_27",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Store Of Brand THAT Belongs To Category1 THAT Has Brand Of Brand THAT Exists In POI THAT Locates At Region"
+    },
+    "Regional Business Dynamics": {
+        "Relations": [
+            "rel_29",
+            "rel_16",
+            "rel_32",
+            "rel_14"
+        ],
+        "Description": "Region THAT Is Served By BusinessArea THAT Contains POI THAT Is Competitive With POI THAT Locates At Region"
+    },
+    "Population Flow Influence": {
+        "Relations": [
+            "rel_24",
+            "rel_13",
+            "rel_1",
+            "rel_4",
+            "rel_14"
+        ],
+        "Description": "Region THAT Has Large Population Flow To Region THAT Has POI THAT Has Category Of Category1 THAT Exists In POI THAT Locates At Region"
+    },
+    "Business and Brand Influence on Reviews": {
+        "Relations": [
+            "rel_29",
+            "rel_16",
+            "rel_28",
+            "rel_27",
+            "rel_14"
+        ],
+        "Description": "Region THAT Is Served By BusinessArea THAT Contains POI THAT Has Brand Of Brand THAT Exists In POI THAT Locates At Region"
+    }
+}
